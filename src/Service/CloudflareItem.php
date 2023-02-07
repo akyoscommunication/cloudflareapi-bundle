@@ -1,6 +1,6 @@
 <?php
 
-namespace Akyos\CloudflareAPIBundle\Service;
+namespace Akyos\CloudflareapiBundle\Service;
 
 use Symfony\Contracts\Translation\TranslatableInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Menu\RouteMenuItem;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Akyos\CloudflareAPIBundle\Controller;
+namespace Akyos\CloudflareapiBundle\Controller;
 
-use Akyos\CloudflareAPIBundle\Service\CloudflareService;
+use Akyos\CloudflareapiBundle\Service\CloudflareService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;

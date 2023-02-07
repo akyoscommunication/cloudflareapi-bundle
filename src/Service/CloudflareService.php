@@ -1,6 +1,6 @@
 <?php
 
-namespace Akyos\CloudflareAPIBundle\Service;
+namespace Akyos\CloudflareapiBundle\Service;
 
 use stdClass;
 use Exception;
