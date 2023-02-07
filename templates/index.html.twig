@@ -1,0 +1,54 @@
+{% extends "@EasyAdmin/page/content.html.twig" %}
+
+{% block main %}
+	{{ encore_entry_link_tags('app') }}
+
+	<div {{ stimulus_controller('cloudflare') }} class="options">
+		{% for key, value in values %}
+			{% if value.type == 'button' %}
+				<div class="card">
+					<div class="card-action">
+						<button data-cloudflare-elem-param="{{ key }}" data-action="click->cloudflare#clickButton">{{ value.label }}</button>
+					</div>
+					<div class="card-help">
+						<p>{{ value.label }}</p>
+						<div>{{value.help}}</div>
+					</div>
+				</div>
+			{% else %}
+				{% if value.value is iterable %}
+					<div class="card">
+						<div id="{{ key }}" class="card-action">
+							{% for key, v in value.value %}
+								<label for="{{ key }}">
+									<input id="{{ key }}" type="checkbox" data-action="change->cloudflare#patchGroup" {{ v == 'on' ? 'checked' : '' }}>
+									{{ key }}
+								</label>
+							{% endfor %}
+						</div>
+						<div class="card-help">
+							<p>{{ value.label }}</p>
+							<div>{{ value.help }}</div>
+						</div>
+					</div>
+				{% else %}
+					<div class="card">
+						<div class="card-action">
+							<label for="{{ key }}">
+								<input id="{{ key }}" type="checkbox" data-action="change->cloudflare#patch" {{ value.value == 'on' ? 'checked' : '' }}>
+								{{ value.label }}
+							</label>
+						</div>
+						<div class="card-help">
+							<p>{{ value.label }}</p>
+							<div>{{ value.help }}</div>
+						</div>
+					</div>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	</div>
+
+	{{ encore_entry_script_tags('app') }}
+
+{% endblock %}

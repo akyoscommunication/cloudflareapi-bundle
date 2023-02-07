@@ -1,0 +1,21 @@
+{
+    "name": "akyos/cloudflareapi-bundle",
+    "type": "symfony-bundle",
+    "description": "Cloudflare Controller API",
+    "keywords": ["api", "cloudflare"],
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0.2"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Akyos\\AkyosCloudflareAPIBundle\\": ""
+        }
+    }
+}

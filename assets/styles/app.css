@@ -1,0 +1,21 @@
+.card{
+    background-color: #303030;
+    border-radius: 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.card-action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.options{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
